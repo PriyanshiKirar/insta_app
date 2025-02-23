@@ -1,0 +1,16 @@
+imgae-image jab upload kr h to server two kam kr k dega
+1 AI se caption likhba h
+2 cloud p image save kr s 
+in dono ko fir database m save kr lenge
+
+morgan -isse pata chltah konsa rout hit hua and kitna time liya 
+
+statics-userMdole.hasshpasword -diretly call kr skte h use kr skte h
+ but methods = isme pehle find krne fir compare krenge 
+
+ express-validator-iska use krenge jo frot s data aa rha h uski help s hm user create kr skte h backend m 
+ mEANS JO FROMAT di h front s bo check krta h before creating
+
+ validatorRsults = ka use krenge errro dekhne k liye if validation fail ho gya to 
+
+ services= iske ander controller ka logic likhteh 
