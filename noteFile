@@ -14,3 +14,18 @@ statics-userMdole.hasshpasword -diretly call kr skte h use kr skte h
  validatorRsults = ka use krenge errro dekhne k liye if validation fail ho gya to 
 
  services= iske ander controller ka logic likhteh 
+
+ mongodb= ssd and hard disk m data ko store krta h
+ redis-ram m data ko store krta h 
+ ram fast hoti h or
+ isliye hm redis use kr rhe hard
+
+
+for authentication-means profile route p jane k liye .
+ redis k passs copy rhti h real data ki 
+ real data mongodb k pass hi hota h
+ jab user request  krt h server p to server redis k pass jata h
+kyuki redis fast response krtah 
+agr redis s data n milta to mongodb k pass jate hthen 
+redis.io   go to this websites
+redis or nodejs ko connect krne liye hm use krte h ioredis

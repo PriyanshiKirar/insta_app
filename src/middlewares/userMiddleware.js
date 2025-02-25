@@ -16,3 +16,15 @@ body('password')
     .isLength({ min: 5 })
     .withMessage("password must be 5 charanter"),
 ]
+
+export const loginUserMidlleware=[
+    body('email')
+    .isEmail()
+    .withMessage("Email must be a valid email"),
+body('password')
+    .isString()
+    .withMessage("password must be a string")
+    .isLength({ min: 5 })
+    .withMessage("password must be 5 charanter"),
+
+]
