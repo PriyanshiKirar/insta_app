@@ -24,7 +24,7 @@ export const createUserController = async (req, res) => {
 
 export const loginUserController = async (req, res) => {
   const error = validationResult(req);
-  if (!error.isEmpty) {
+  if (!error.isEmpty()) {  // Fixed missing parentheses in isEmpty()
     return res.status(400).json({ error: error.array() });
   }
 
@@ -34,6 +34,6 @@ export const loginUserController = async (req, res) => {
     const token = user.gerateToken();
     return res.status(200).json({ user, token });
   } catch (error) {
-    res.status(401).send("loginerror", error.message);
+    return res.status(400).json({ error: "loginerror", message: error.message });  // Fixed catch block
   }
 };

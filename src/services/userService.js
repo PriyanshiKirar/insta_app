@@ -23,19 +23,18 @@ export const createUser = async ({ username, email, password }) => {
   delete user._doc.password;
   return user;
 };
-
-export const loginUser=async ({email,password}) => {
+export const loginUser = async ({ email, password }) => {
   const user = await userModel.findOne({ email });
 
   if (!user) {
-  return  res.status(401).send("Invalid credentials");
+    throw new Error("Invalid credentials");
   }
   const isPasswordCorrect = await user.comparePassword(password);
 
   if (!isPasswordCorrect) {
-  return  res.status(401).send("Invalid credentials");
+    throw new Error("Invalid credentials");
   }
-  await user.save()
-delete user._doc.password;
-return user;
-}
+
+  delete user._doc.password;
+  return user;
+};
