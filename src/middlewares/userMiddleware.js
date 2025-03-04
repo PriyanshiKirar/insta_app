@@ -28,7 +28,7 @@ export const authUser = async (req, res, next) => {
   const token = req.cookies.token || req.headers.authentication?.split(" ")[1];
   try {
     if (!token) {
-      return res.status(401).json({ meassage: "Unauthorided" });
+      return res.status(401).json({ meassage: "Unauthorized" });
     }
     const decoded = userModel.verifyToekn(token);
     let user = await redis.get(`user:${decoded._id}`);
@@ -42,7 +42,7 @@ export const authUser = async (req, res, next) => {
         delete user._doc.password;
         await redis.set(`user:${decoded._id}`, JSON.stringify(user));
       } else{
-        return res.status(401).json({ meassage: "Unauthorided" });
+        return res.status(401).json({ meassage: "Unauthorized" });
 
       }
     }
