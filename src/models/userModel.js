@@ -64,8 +64,8 @@ userSchema.methods.gerateToken = function () {
   return token;
 };
 
-userSchema.statics.verifyToekn = function () {
-  if (!toekn) {
+userSchema.statics.verifyToken = function (token) {
+  if (!token) {
     throw new Error("token is required");
   }
   return jwt.verify(token, config.JWT_SECRET);

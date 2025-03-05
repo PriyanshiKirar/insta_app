@@ -29,3 +29,13 @@ kyuki redis fast response krtah
 agr redis s data n milta to mongodb k pass jate hthen 
 redis.io   go to this websites
 redis or nodejs ko connect krne liye hm use krte h ioredis
+
+
+logout-jab hm logout honge to browser s token hat jata h par server k pass to rhta h agr kisi
+ ko toekn  mil gya bo request kr skta h 
+
+isliye hm kya regenge jab logout honge us 
+toekn=token ko server p block kr denge taki koi ussi token s request na 
+ kr skte  with the help of redis
+
+ redis ingisht -m token dikh h kab huye blacklist h sab kuch usse manual hata padh agr ttl use ni kiya to
