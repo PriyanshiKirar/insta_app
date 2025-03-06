@@ -29,7 +29,7 @@ export const authUser = async (req, res, next) => {
   const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
   try {
     if (!token) {
-      return res.status(401).json({ message: "Unauthorized vv" });
+      return res.status(401).json({ message: "Unauthorized" });
     } 
 
       //  for check token is blacklist or not 
@@ -53,7 +53,7 @@ export const authUser = async (req, res, next) => {
         delete user._doc.password;
         await redis.set(`user:${decoded._id}`, JSON.stringify(user));
       } else{
-        return res.status(401).json({ message: "Unauthorized aa" });
+        return res.status(401).json({ message: "Unauthorized " });
 
       }
     }
