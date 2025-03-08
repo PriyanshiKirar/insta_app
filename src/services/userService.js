@@ -32,7 +32,7 @@ export const loginUser = async ({ email, password }) => {
   const isPasswordCorrect = await user.comparePassword(password);
 
   if (!isPasswordCorrect) {
-    throw new Error("Invalid credentials");
+    throw new Error("Invalid Credentials");
   }
 
   delete user._doc.password;
