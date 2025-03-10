@@ -27,7 +27,7 @@ export const loginUser = async ({ email, password }) => {
   const user = await userModel.findOne({ email });
 
   if (!user) {
-    throw new Error("Invalid credentials");
+    throw new Error("Invalid Credentials");
   }
   const isPasswordCorrect = await user.comparePassword(password);
 
