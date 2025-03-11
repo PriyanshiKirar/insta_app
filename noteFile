@@ -38,4 +38,4 @@ isliye hm kya regenge jab logout honge us
 toekn=token ko server p block kr denge taki koi ussi token s request na 
  kr skte  with the help of redis
 
- redis ingisht -m token dikh h kab huye blacklist h sab kuch usse manual hata padh agr ttl use ni kiya to
+ redis ingisht -m token dikh h kab huye blacklist h sab kuch usse manual hata padh h agr ttl use ni kiya to
