@@ -7,7 +7,7 @@ const redis=new Redis({
 })
 
 redis.on("connect",()=>{
-    console.log("redis connceted to proper");
+    console.log("redis connceted ");
     
 })
 export default redis;
