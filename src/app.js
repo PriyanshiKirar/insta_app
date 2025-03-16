@@ -4,7 +4,7 @@ import userRoute from "./routes/userRoute.js";
 import cookieParser from "cookie-parser";
 
 const app = express();
-
+// for which rout is hit and take time also how much
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
