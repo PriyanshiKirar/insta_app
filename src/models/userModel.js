@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     unique: [true, "Username already existsa"], //iska mtlb user h user same name ka ni hoga
     trim: true,
     lowercase: true,
-    minLength: [3, "username must be 3 characters"],
+    minLength: [3, "Username must be 3 characters"],
     maxLength: [15, "username must be 20 characters"],
   },
   email: {
