@@ -14,8 +14,8 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: [true, "email is reuired"],
-    unique: [true, "email already existsa"],
+    required: [true, "email is required"],
+    unique: [true, "email already exists"],
     trim: true,
     lowercase: true,
     minLength: [6, "email must be 6 characters"],
