@@ -8,7 +8,7 @@ export const connect = () => {
       console.log("connected to db ");
     })
     .catch((err) => {
-      console.log("error of", err.message);
+      console.log("error", err.message);
     });
 };
 
